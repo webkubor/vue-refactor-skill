@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="vueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42b883;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#35495e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur" />
+      <feFlood flood-color="#42b883" flood-opacity="0.3" result="flood" />
+      <feComposite in="flood" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <title>Vue-Refactor Logo</title>
+
+  <!-- Symbolic "V" Architecture & Refactoring Paths -->
+  <g filter="url(#softGlow)">
+    <!-- Outer V (The Original Structure) -->
+    <path d="M100 120L256 400L412 120" stroke="#35495e" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+    
+    <!-- Inner V (The Refactored Core) -->
+    <path d="M180 120L256 260L332 120" stroke="url(#vueGradient)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Clean Refactoring Nodes -->
+    <circle cx="256" cy="400" r="15" fill="#35495e" />
+    <circle cx="256" cy="260" r="12" fill="url(#vueGradient)" />
+  </g>
+</svg>
